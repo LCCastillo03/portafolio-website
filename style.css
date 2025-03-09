@@ -11,6 +11,10 @@
     list-style: none;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 header{
     position: fixed;
     top: 1rem;
@@ -313,6 +317,8 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    justify-items: center;
+
 }
 
 .project-card{
@@ -356,40 +362,6 @@ transform: translateY(-10px)scale(1.02);
     font-weight: 500;
 }
 
-
-.input-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
-    margin-top: 5rem;
-}
-
-.input-box input{
-    border-radius: 3rem;
-    border: 2px solid black;
-    padding: 2rem 8rem;
-    font-size: 3rem;
-}
-
-.input-box input::placeholder{
-    font-size: 3rem;
-}
-
-.input{
-    position: relative;
-}
-
-.input i{
-    position: absolute;
-    font-size: 4em;
-    top: 50%;
-    left: 10px;
-    transform: translate(50%, -50%);
-}
-
 footer {
     bottom: 0;
     left:0;
@@ -400,6 +372,7 @@ footer {
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    padding-top: 0rem;
 }
 
 footer ul{
@@ -418,7 +391,27 @@ footer ul li a{
     margin-top: 2rem;
 }
 
+.contact-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem; /* Ajusta según lo necesites */
+    font-weight: bold;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    width: fit-content;
+    margin: 0 auto; /* Centrado */
+    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden; /* Evita que se desborde */
+}
 
+.contact-email i {
+    padding-right: 1rem;
+    font-size: 1.5rem; /* Tamaño del ícono */
+    color: black;
+}
 
 
 /* ----- RESPONSIVE ----- */
@@ -433,18 +426,7 @@ footer ul li a{
     .experiencie-info{
         flex-direction: column;
     }
-    .input-box input{
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
-    }
-    .input input::placeholder{
-        font-size: 2.5rem;
-    }
-    .input box i{
-        font-size: 2.5rem;
-    }
 }
-
 
 @media(max-width:768px) {
     header{
@@ -463,18 +445,6 @@ footer ul li a{
     .about-container {
     flex-direction: column;
 }
-    .input-box input{
-        padding: 1rem 2rem;
-        font-size: 1.8rem;
-    }
-
-    .input-box input::placeholder{ 
-        font-size: 1.5rem;
-    }
-
-    .input-box i{
-        display: none;
-    }
 
     .grid{
         grid-template-columns: repeat(1, 1fr);
@@ -522,21 +492,23 @@ footer ul li a{
     width: 80vw;
  }
 
- .input-box input{
-    padding: 0.5rem 3rem;
-    width: 80%;
-    font-size: 1.5rem;
- }
-
- .input-box input::placeholder{
-    font-size: 1.5rem;
- }
-
  footer ul{
     gap:1rem;
  }
 
+ .projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
+
+.project-card {
+    width: 100%; /* Asegura que no sea más ancho de lo necesario */
+    max-width: 400px; /* Evita que se estire demasiado */
+}
+}
+
 
 
 
@@ -554,5 +526,18 @@ footer ul li a{
     }
     .about2-info{
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-email {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        padding: 0.6rem 1rem; /* Reduce el padding */
+        gap: 0.5rem; /* Menos espacio entre ícono y texto */
+        border-radius: 1.5rem;
+    }
+
+    .contact-email i {
+        font-size: 1.2rem; /* Ícono más pequeño */
     }
 }
