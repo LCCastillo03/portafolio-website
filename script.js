@@ -8,3 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+const menuIcon = document.querySelector('#menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuIcon && navLinks) {
+    menuIcon.onclick = () => {
+        navLinks.classList.toggle('active');
+    };
+} else {
+    console.error("No se encontró #menu-icon o .nav-links en el DOM");
+}
+
