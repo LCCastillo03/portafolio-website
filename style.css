@@ -197,7 +197,6 @@ a {
 
 .typedText {
     color: var(--text-color-third);
-    /* Usa tu color preferido */
 }
 
 
@@ -582,7 +581,7 @@ footer ul li a {
         position: fixed;
         top: 0rem;
     }
-    
+
     .section-title {
         font-size: 50px; 
     }
@@ -603,7 +602,7 @@ footer ul li a {
 
     #contact {
         min-height: auto;
-        padding-bottom: 2rem; /* Ajusta según sea necesario */
+        padding-bottom: 2rem; 
     }
 
     footer ul li a {
@@ -664,11 +663,8 @@ footer ul li a {
 
     .project-card img {
         width: 150%;
-        /* Hace que la imagen crezca más allá del contenedor */
         min-width: 300px;
-        /* Asegura que tenga un tamaño mínimo */
         max-width: none;
-        /* Evita restricciones */
     }
 
 }
